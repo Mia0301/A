@@ -597,7 +597,7 @@ if len(st.session_state["history"]) > 0:
         plant_name = plants[0][0] if plants else "未知植物"
 
         with st.sidebar.expander(f"🌿 {plant_name}"):
-            st.image(img, caption="辨識圖片", use_column_width=True)
+            st.image(img, caption="辨識圖片", use_container_width =True)
             for plant, conf in plants:
                 st.write(f"- **{plant}** (信心分數：{conf:.2f})")
 else:
