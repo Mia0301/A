@@ -3,8 +3,8 @@ import torch
 import numpy as np
 from PIL import Image
 from ultralytics import YOLO
-
-model = YOLO('bestff.pt')
+import cv2
+model = YOLO('best.pt')
 
 plant_info = {
     "Adenium_obesum": {
