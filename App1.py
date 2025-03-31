@@ -12,7 +12,7 @@ import cv2
 model = YOLO('best (1).pt')
 
 plant_info = {
-    "Adenium_obesum": {
+    "Adenium obesum": {
         "中文名稱": "沙漠玫瑰(別名:富貴花)",
         "屬性": "夾竹桃科沙漠玫瑰屬",
         "花的顏色": "紅色、白色、粉紅色",
