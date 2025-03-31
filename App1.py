@@ -612,7 +612,7 @@ if len(st.session_state["history"]) > 0:
         # 取得第一個辨識出的植物名稱，若無則顯示 "未知植物"
         plant_name = plants[0][0] if plants else "未知植物"
 
-        with st.sidebar.expander(f"🌿 {info['中文名稱']}"):
+        with st.sidebar.expander(f"🌿 {plant_name}"):
             st.image(img, caption="辨識圖片", use_container_width =True)
             for plant, conf in plants:
                 st.write(f"- **{plant}** (信心分數：{conf:.2f})")
