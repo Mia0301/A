@@ -7,7 +7,3 @@ numpy
 pillow
 opencv-python-headless
 pandas
-matplotlib
-requests
-streamlit_option_menu
-streamlit_components
