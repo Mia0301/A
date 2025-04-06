@@ -554,7 +554,9 @@ elif option == upload_label:
     st.subheader("📤 上傳圖片")
     uploaded_file = st.file_uploader("選擇圖片", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
-        image = Image.open(uploaded_file)
+        image = Image.open(uploaded_file).convert("RGB")
+        image_np = np.array(image)
+        results = model(image_np)
         st.image(image, caption="上傳的圖片", width=300)
 
 
