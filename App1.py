@@ -9,6 +9,7 @@ import numpy as np
 from PIL import Image
 from ultralytics import YOLO
 import cv2
+st.set_page_config(page_title="花草辨識小助理", page_icon="🌱", layout="wide")
 
 st.markdown("""
     <style>
@@ -545,8 +546,6 @@ plant_info = {
         "環保資訊": "無法環保。",
     },
 }
-
-st.set_page_config(page_title="花草辨識小助理", page_icon="🌱", layout="wide")
 
 st.title("🌿 花草辨識小助理")
 st.write("探索校園的植物世界，學習植物知識，感受自然之美！")
