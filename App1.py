@@ -9,7 +9,7 @@ import numpy as np
 from PIL import Image
 from ultralytics import YOLO
 import cv2
-model = YOLO('bestbest.pt')
+model = YOLO('best (1).pt')
 
 plant_info = {
     "Adenium obesum": {
