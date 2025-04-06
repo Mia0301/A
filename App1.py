@@ -9,6 +9,47 @@ import numpy as np
 from PIL import Image
 from ultralytics import YOLO
 import cv2
+
+st.markdown("""
+    <style>
+    /* 全局字體與背景 */
+    html, body, [class*="css"]  {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8fff8;
+        color: #3a3a3a;
+    }
+
+    /* 自訂主標題 */
+    .custom-title {
+        font-size: 26px;
+        font-weight: 600;
+        color: #2c7c4f;
+        margin-bottom: 10px;
+    }
+
+    /* 次標題或區塊標題 */
+    .section-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #4caf50;
+        margin-top: 20px;
+    }
+
+    /* 美化按鈕 */
+    button[kind="primary"] {
+        background-color: #4caf50;
+        color: white;
+        border-radius: 10px;
+        padding: 0.5em 1em;
+    }
+
+    /* 美化圖片區塊 */
+    img {
+        border-radius: 10px;
+        border: 1px solid #d1e7d1;
+    }
+    </style>
+""", unsafe_allow_html=True)
 model = YOLO('bestbest.pt')
 
 plant_info = {
