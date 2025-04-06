@@ -9,7 +9,7 @@ import numpy as np
 from PIL import Image
 from ultralytics import YOLO
 import cv2
-model = YOLO('bestbb.pt')
+model = YOLO('best (1).pt')
 
 plant_info = {
     "Adenium obesum": {
@@ -554,13 +554,17 @@ elif option == upload_label:
     st.subheader("📤 上傳圖片")
     uploaded_file = st.file_uploader("選擇圖片", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
-        image = Image.open(uploaded_file)
-        st.image(image, caption="上傳的圖片", width=300)
 
+    # 讀取圖片並轉換成 RGB
+    image = Image.open(uploaded_file).convert("RGB")
 
-st.subheader(result_label)
-if image is not None:
+    # 轉成 NumPy 陣列
     image_np = np.array(image)
+
+    # Debug: 顯示圖片資訊
+    st.write("Image shape:", image_np.shape)
+    st.write("Image dtype:", image_np.dtype)
+
     results = model(image_np)
     predictions = results[0].boxes.data.cpu().numpy()
 
