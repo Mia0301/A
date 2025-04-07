@@ -3,12 +3,11 @@ import torch
 import numpy as np
 from PIL import Image
 from ultralytics import YOLO
-from ultralytics.models import NAS, RTDETR, SAM, YOLO, YOLOE, FastSAM, YOLOWorld
 import cv2
 
 st.set_page_config(page_title="花草辨識小助理", page_icon="🌱", layout="wide")
 
-model = YOLO('bestbest.pt')
+model = YOLO('best.pt')
 
 plant_info = {
     "Adenium obesum": {
