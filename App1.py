@@ -1,5 +1,4 @@
 import streamlit as st
-import asyncio
 import torch
 import numpy as np
 from PIL import Image
