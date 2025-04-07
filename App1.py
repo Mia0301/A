@@ -7,7 +7,7 @@ import cv2
 
 st.set_page_config(page_title="花草辨識小助理", page_icon="🌱", layout="wide")
 
-model = YOLO('best.pt')
+model = YOLO('bestbest.pt')
 
 plant_info = {
     "Adenium obesum": {
@@ -576,7 +576,6 @@ if "history" not in st.session_state:
 
 image = None
 
-
 if option == take_photo_label:
     st.subheader("📸 使用相機拍攝")
     camera_photo = st.camera_input("點擊下方按鈕拍照")
@@ -590,7 +589,6 @@ elif option == upload_label:
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption="上傳的圖片", width=300)
-
 
 st.subheader(result_label)
 if image is not None:
