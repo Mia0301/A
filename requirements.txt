@@ -4,3 +4,4 @@ opencv-python-headless==4.8.0.76
 numpy==1.24.4
 Pillow
 pandas
+ultralytics.models
