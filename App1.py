@@ -51,7 +51,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
-model = YOLO('bestbest.pt')
+model = YOLO('best.pt')
 
 plant_info = {
     "Adenium obesum": {
