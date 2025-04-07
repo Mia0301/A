@@ -1,9 +1,5 @@
 import streamlit as st
 import asyncio
-try:
-    asyncio.get_running_loop()
-except RuntimeError:
-    asyncio.set_event_loop(asyncio.new_event_loop())
 import torch
 import numpy as np
 from PIL import Image
