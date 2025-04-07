@@ -4,6 +4,7 @@ import torch
 import numpy as np
 from PIL import Image
 from ultralytics import YOLO
+import cv2
 
 st.set_page_config(page_title="花草辨識小助理", page_icon="🌱", layout="wide")
 
