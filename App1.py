@@ -7,7 +7,7 @@ import cv2
 
 st.set_page_config(page_title="花草辨識小助理", page_icon="🌱", layout="wide")
 
-model = YOLO('bestbest.pt')
+model = YOLO('yolov5s.pt')
 
 plant_info = {
     "Adenium obesum": {
