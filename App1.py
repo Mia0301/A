@@ -2,13 +2,12 @@ import streamlit as st
 import torch
 import numpy as np
 from PIL import Image
-import ultralytics
 from ultralytics import YOLO
 import cv2
 
 st.set_page_config(page_title="花草辨識小助理", page_icon="🌱", layout="wide")
 
-model = YOLO('best.pt')
+model = YOLO('bestbest.pt')
 
 plant_info = {
     "Adenium obesum": {
