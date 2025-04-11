@@ -9,7 +9,7 @@ import urllib.request
 
 # ========== ✅ 自動下載 YOLO 模型（僅限第一次） ==========
 MODEL_URL = "https://drive.google.com/uc?export=download&id=1zWmUVA-qCUebjdc_fId6_n6kBNg89KgH"
-MODEL_PATH = "models/best.pt"
+MODEL_PATH = "best.pt"
 
 if not os.path.exists(MODEL_PATH):
     os.makedirs("models", exist_ok=True)
