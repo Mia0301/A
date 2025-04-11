@@ -4,10 +4,24 @@ import numpy as np
 from PIL import Image
 from ultralytics import YOLO
 import cv2
+import os
+import urllib.request
+
+# ========== ✅ 自動下載 YOLO 模型（僅限第一次） ==========
+MODEL_URL = "https://drive.google.com/uc?export=download&id=1zWmUVA-qCUebjdc_fId6_n6kBNg89KgH"
+MODEL_PATH = "models/best.pt"
+
+if not os.path.exists(MODEL_PATH):
+    os.makedirs("models", exist_ok=True)
+    with st.spinner("正在下載模型，請稍候..."):
+        urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+        st.success("模型下載完成 ✅")
+
+# ========== ✅ 載入模型（強制使用 CPU） ==========
+model = YOLO(MODEL_PATH)
+
 
 st.set_page_config(page_title="花草辨識小助理", page_icon="🌱", layout="wide")
-
-model = YOLO('best.pt')
 
 plant_info = {
     "Adenium obesum": {
